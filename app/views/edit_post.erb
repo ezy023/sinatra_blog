@@ -1,0 +1,15 @@
+<h1>Create post page</h1>
+
+<form action='/edit_post' method='post'>
+  <input class="edit_post" type='text' name='title' placeholder='<%= @post.title %>'>
+  <br>
+  <input class="edit_post" type='textarea' name='content' placeholder='<%= @post.content %>'>
+  <input class="edit-post" type='hidden' name='post_id' value='<%= @post.id %>'>
+  <input type="submit">
+</form>
+
+<form action='/add_tag' method='post'>
+  <input type='text' name='tag_name' placeholder='Add tag'>
+  <input type='hidden' name='post_id' value='<%= @post.id %>'>
+  <input type='submit'>
+</form>

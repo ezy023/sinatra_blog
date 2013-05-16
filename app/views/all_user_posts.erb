@@ -1,0 +1,9 @@
+<h1>All user posts</h1>
+
+<% if @all_posts %>
+  <% @all_posts.each do |post| %>
+    <h3><a href="/show/<%= post.id %>"><%= post.title %></a></h3>
+    <p><%= post.content[0..20] %>...</p>
+    <form action="/delete_post/<%= post.id %>"
+  <% end %>
+<% end %>
